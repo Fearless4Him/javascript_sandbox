@@ -1,0 +1,99 @@
+:root {
+  --dark: black;
+  --light: aliceblue;
+  --hero-height: 30rem;
+}
+
+/* Resets  */
+* {
+  padding: 0;
+  margin: 0;
+  /* outline: 1px solid orangered; */
+}
+body {
+  font-size: 2rem;
+}
+
+a {
+  color: var(--text);
+  position: relative;
+  text-decoration: none;
+  margin-inline: 0.5rem;
+}
+a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: orangered;
+  height: 3px;
+  bottom: -20px;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+a:hover:after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+li {
+  list-style: none;
+}
+
+/* Util  */
+.container {
+  width: min(60rem, 100% - 4rem);
+  margin-inline: auto;
+}
+.hidden {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+.btn i {
+  font-size: 2.5rem;
+}
+.darkMode {
+  background-color: var(--dark);
+  color: aliceblue;
+}
+.darkMode a {
+  color: var(--light);
+}
+.darkMode .fa-sun {
+  color: var(--light);
+}
+
+/* Components  */
+.navbar {
+  height: 64px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  margin-inline: 10px;
+}
+.hero {
+  height: var(--hero-height);
+  justify-content: center;
+  align-items: center;
+  background-image: url('public/space.avif');
+  background-size: cover;
+  background-position: center;
+}
+.eclipseImg {
+  width: 290px;
+  height: 290px;
+  /* height: auto; */
+  border-radius: 50%;
+  object-fit: cover;
+}
