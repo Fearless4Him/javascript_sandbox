@@ -1,7 +1,9 @@
 import { navigation_items } from "./seedData.js";
-import { getBody } from "./variables.js";
+import * as vars from "./variables.js";
+
 export function generateNavbar(items) {
     const navUl = document.getElementById("nav-ul");
+    items = items || [];
     items.forEach((item) => {
       const a = document.createElement("a");
       const li = document.createElement("li");
@@ -20,7 +22,7 @@ export function generateNavbar(items) {
   generateNavbar();
 
   export function toggleDarkMode() {
-    const body = getBody;
+    const body = vars.getBody;
     const lightModeBtn = document.getElementById('lightMode');
     const darkModeBtn = document.getElementById('darkMode');
   
