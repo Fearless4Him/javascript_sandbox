@@ -86,7 +86,7 @@ li {
   height: var(--hero-height);
   justify-content: center;
   align-items: center;
-  background-image: url('public/space.avif');
+  background-image: url('/public/space.avif');
   background-size: cover;
   background-position: center;
 }
