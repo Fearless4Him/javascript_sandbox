@@ -1,4 +1,4 @@
-const navigation_items = [
+export const navigation_items = [
     {
       name: "Home",
       icon: "fa-house",

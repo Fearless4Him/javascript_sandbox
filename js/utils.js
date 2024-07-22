@@ -1,3 +1,4 @@
+import { navigation_items } from "./seedData.js";
 export function generateNavbar(items) {
     const navUl = document.getElementById("nav-ul");
     items.forEach((item) => {
